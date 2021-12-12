@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const PORT = 2015 || process.env.PORT
-
+const {conn} = require('./Config/DB/Connection')
 
 app.get('/', (req, res)=>{
     res.json({"message": "Hello Clarice 😬"})
