@@ -4,7 +4,13 @@ const { conn } = require('../Config/DB/Connection')
 const getCoursesData = _ => {
     return new Promise((resolve, reject) => {
         try {
-            let query = "SELECT * FROM courses;"
+            let query = `
+                    SELECT 
+                        subject_id AS "subject",
+                        course_name AS "course",
+                        course_created_at AS "postedON",
+                        course_link AS "link" 
+                    FROM courses;`
             conn.query(query, function (error, result) {
                 if (error) console.log(error);
                 resolve(result)
@@ -23,7 +29,7 @@ const getSubjects = _ => {
             SELECT 
                 subjects.subject_name AS "Subject", 
                 subjects.subject_teacher AS "Teacher",
-                (SELECT COUNT(*) FROM courses WHERE courses.subject_id=subjects.subject_id) AS "Courses count"
+                (SELECT COUNT(*) FROM courses WHERE courses.subject_id=subjects.subject_id) AS "CoursesCount"
             FROM subjects;
             `
             conn.query(query, function (error, result) {
