@@ -4,7 +4,9 @@ const PORT = 2015 || process.env.PORT
 require('dotenv').config()
 const { auth } = require('express-openid-connect')
 const { requiresAuth } = require('express-openid-connect')
-
+app.set('views', 'views')
+app.set('view engine', 'ejs')
+app.use(express.static('public'))
 
 const config = {
     authRequired: false,
@@ -19,7 +21,7 @@ const config = {
 app.use(auth(config));
 app.get('/', (req, res)=>{
     // res.json({"message": "Hello Clarice 😬"})
-    res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+    res.render('index')
 })
 
 // ROUTES
