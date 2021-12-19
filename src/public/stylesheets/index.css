@@ -277,4 +277,49 @@ footer #author-link {
 .post-card .card-footer p {
   color: #ED4956;
 }
+
+#main-subjects {
+  margin-top: 1rem;
+}
+
+#main-subjects #subjects-grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.subject-card {
+  border: 1px solid #DBDBDB;
+  border-radius: 0.2rem;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.subject-card .subject-title {
+  font-size: 1.5rem;
+  color: #ED4956;
+  text-decoration: underline;
+}
+
+.subject-card .teacher {
+  color: #a2a2a2;
+}
+
+.subject-card .course-count-subject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subject-card .course-count-subject span {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
 /*# sourceMappingURL=index.css.map */
