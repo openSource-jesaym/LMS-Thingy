@@ -136,11 +136,11 @@
             font-size: 1.3rem;
             cursor: pointer;
             &:hover{
-                color: #ED4956;
+                color: $hot-color;
             }
         }
         p{
-            color: #ED4956;
+            color: $hot-color;
         }
     }
 }

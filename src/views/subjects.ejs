@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+
+<%- include('partials/headerNavigation.ejs') %>
+<main id="main-subjects">
+    <div class="container">
+        <section id="subjects-grid">
+            <% subjects.forEach(s => { %>
+                <div class="subject-card">
+                    <a class="subject-title" href="#"><%- s.Subject %></a>
+                    <p class="teacher">Taught by <strong><%- s.Teacher %></strong></p>
+                    <p class="course-count-subject"><span><%- s.CoursesCount %></span> Course(s)</p>
+                </div>
+            <%})  %>
+        </section>
+        <!-- end of container -->
+    </div>
+</main>
+
+<%- include('partials/footer.ejs') %>

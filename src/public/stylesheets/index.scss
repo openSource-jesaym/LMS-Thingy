@@ -2,6 +2,7 @@
 $bg-color: #FAFAFA;
 $primary-color: #1877F2;
 $secondary-color: #36A420;
+$hot-color: #ED4956;
 $text-primary-color: #1d2129;
 $text-secondary-color: #dddfe2;
 $border-radius: .2rem;
@@ -31,3 +32,4 @@ body{
 
 @import './indexPage';
 @import './home';
+@import './subjects';
