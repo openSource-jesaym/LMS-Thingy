@@ -228,6 +228,10 @@ footer #author-link {
   margin-bottom: 1rem;
 }
 
+.post-card .card-body p {
+  margin-bottom: 1rem;
+}
+
 .post-card .card-body .link {
   display: block;
   width: 150px;
