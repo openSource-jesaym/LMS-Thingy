@@ -44,6 +44,25 @@
                 width: 24px;
             }
         }
+        .toolTipHolder{
+            position: relative;
+            span{
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $text-primary-color;
+                color: #fff;
+                border-radius: $border-radius;
+                visibility: hidden;
+                opacity: 0;
+                transition: .2s ease-in-out;
+            }
+            &:hover span{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
     }
 }
 
@@ -114,8 +133,9 @@
         }
         .link{
             display: block;
-            width: 150px;
+            width: 210px;
             text-decoration: none;
+            white-space: nowrap;
             color: $text-primary-color;
             overflow: hidden;
             text-overflow: ellipsis;

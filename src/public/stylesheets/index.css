@@ -146,6 +146,30 @@ footer #author-link {
   width: 24px;
 }
 
+#main-header #navButtons .toolTipHolder {
+  position: relative;
+}
+
+#main-header #navButtons .toolTipHolder span {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #1d2129;
+  color: #fff;
+  border-radius: 0.2rem;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+#main-header #navButtons .toolTipHolder:hover span {
+  visibility: visible;
+  opacity: 1;
+}
+
 #main-feeds {
   margin-top: 1rem;
 }
@@ -235,8 +259,9 @@ footer #author-link {
 
 .post-card .card-body .link {
   display: block;
-  width: 150px;
+  width: 210px;
   text-decoration: none;
+  white-space: nowrap;
   color: #1d2129;
   overflow: hidden;
   text-overflow: ellipsis;
