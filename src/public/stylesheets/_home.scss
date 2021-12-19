@@ -7,6 +7,7 @@
     z-index: 2;
     #brand{
         font-size: 1.5rem;
+        color: $text-primary-color;
     }
     .container{
         display: flex;
@@ -115,12 +116,13 @@
             display: block;
             width: 150px;
             text-decoration: none;
-            color: $primary-color;
+            color: $text-primary-color;
             overflow: hidden;
             text-overflow: ellipsis;
             &:hover{
                 cursor: pointer;
                 text-decoration: underline;
+                color: $primary-color;
             }
         }
     }
