@@ -6,7 +6,7 @@ const getCoursesData = _ => {
         try {
             let query = `
                     SELECT 
-                        subject_id AS "subject",
+                        (SELECT subjects.subject_name FROM subjects WHERE subjects.subject_id=courses.subject_id) AS "subject",
                         course_name AS "course",
                         course_created_at AS "postedON",
                         course_link AS "link" 

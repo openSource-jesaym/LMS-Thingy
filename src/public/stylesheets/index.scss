@@ -1,0 +1,33 @@
+// Variables
+$bg-color: #FAFAFA;
+$primary-color: #1877F2;
+$secondary-color: #36A420;
+$text-primary-color: #1d2129;
+$text-secondary-color: #dddfe2;
+$border-radius: .2rem;
+$border-color: #DBDBDB;
+
+*, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+body{
+    font-family: Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: $bg-color;
+}
+.container{
+    width: 70%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#brand{
+    font-size: 3rem;
+    color: $primary-color;
+}
+
+@import './indexPage';
+@import './home';
