@@ -7,7 +7,8 @@ const { getCoursesData, getSubjects} = require('../Functions/Home')
 router.get('/', (req, res)=>{
     getCoursesData()
     .then(courses=>{
-        res.json(courses)
+        res.render('home', { courses: courses})
+        // res.json(courses)
     })
 })
 

@@ -1,0 +1,73 @@
+<%- include('partials/header.ejs') %>
+
+<%- include('partials/headerNavigation.ejs') %>
+<main id="main-feeds">
+    <div class="container">
+        <section id="posts">
+            <% courses.forEach(c => { %>
+                <div class="post-card">
+                    <div class="card-body">
+                        <h3><%- c.course %></h3>
+                        <span class="date"><%- c.postedON %></span>
+                        <span class="link"><%- c.link %></span>
+                    </div>
+                    <div class="card-footer">
+                        <p><%- c.subject %></p>
+                        <span class="save">
+                            <i class="far fa-bookmark"></i>
+                        </span>
+                    </div>
+                </div>
+            <%})  %>
+        </section>
+        <section id="sidePanel">
+            <p>Quick Links</p>
+            <ul>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="far fa-clock"></i>
+                        Time Table
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-google-drive"></i>
+                        Google Drive
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                        Facebook Group
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                        YouTube Channel
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-github"></i>
+                        GitHub Repository
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fas fa-archive"></i>
+                        Archive
+                    </a>
+                </li>
+            </ul>
+            <footer>
+                <p>mdsbeja@gmail.com</p>
+                <p>mds.islaib@gmail.com</p>
+                <p>Made with 0.0001% 💜, <a href="https://aymkh.tn" id="author-link" target="_blank">AymKh ↗</a> &copy; 2021</p>
+            </footer>
+        </section>
+        <!-- end of container -->
+    </div>
+</main>
+
+<%- include('partials/footer.ejs') %>
