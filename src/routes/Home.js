@@ -8,6 +8,7 @@ router.get('/', (req, res)=>{
     getCoursesData()
     .then(courses=>{
         res.render('home', { courses: courses})
+        // res.json(courses)
     })
 })
 
