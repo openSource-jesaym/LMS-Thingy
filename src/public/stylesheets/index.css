@@ -92,6 +92,7 @@ footer #author-link {
 
 #main-header #brand {
   font-size: 1.5rem;
+  color: #1d2129;
 }
 
 #main-header .container {
@@ -143,6 +144,30 @@ footer #author-link {
 
 #main-header #navButtons a img, #main-header #navButtons span img {
   width: 24px;
+}
+
+#main-header #navButtons .toolTipHolder {
+  position: relative;
+}
+
+#main-header #navButtons .toolTipHolder span {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #1d2129;
+  color: #fff;
+  border-radius: 0.2rem;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+#main-header #navButtons .toolTipHolder:hover span {
+  visibility: visible;
+  opacity: 1;
 }
 
 #main-feeds {
@@ -228,11 +253,16 @@ footer #author-link {
   margin-bottom: 1rem;
 }
 
+.post-card .card-body p {
+  margin-bottom: 1rem;
+}
+
 .post-card .card-body .link {
   display: block;
-  width: 150px;
+  width: 210px;
   text-decoration: none;
-  color: #1877F2;
+  white-space: nowrap;
+  color: #1d2129;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -240,6 +270,7 @@ footer #author-link {
 .post-card .card-body .link:hover {
   cursor: pointer;
   text-decoration: underline;
+  color: #1877F2;
 }
 
 .post-card .card-footer {
@@ -272,5 +303,50 @@ footer #author-link {
 
 .post-card .card-footer p {
   color: #ED4956;
+}
+
+#main-subjects {
+  margin-top: 1rem;
+}
+
+#main-subjects #subjects-grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.subject-card {
+  border: 1px solid #DBDBDB;
+  border-radius: 0.2rem;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.subject-card .subject-title {
+  font-size: 1.5rem;
+  color: #ED4956;
+  text-decoration: underline;
+}
+
+.subject-card .teacher {
+  color: #a2a2a2;
+}
+
+.subject-card .course-count-subject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subject-card .course-count-subject span {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-right: 1rem;
 }
 /*# sourceMappingURL=index.css.map */

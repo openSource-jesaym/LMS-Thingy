@@ -16,7 +16,8 @@ router.get('/', (req, res)=>{
 router.get('/subjects', (req, res)=>{
     getSubjects()
     .then(subjects=>[
-        res.json(subjects)
+        res.render('subjects', { subjects: subjects})
+        // res.json(subjects)
     ])
 })
 

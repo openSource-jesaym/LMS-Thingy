@@ -9,8 +9,10 @@ const getCoursesData = _ => {
                         (SELECT subjects.subject_name FROM subjects WHERE subjects.subject_id=courses.subject_id) AS "subject",
                         course_name AS "course",
                         course_created_at AS "postedON",
-                        course_link AS "link" 
-                    FROM courses;`
+                        course_link AS "link",
+                        course_description AS "description"
+                    FROM courses
+                    ORDER BY course_id DESC;`
             conn.query(query, function (error, result) {
                 if (error) console.log(error);
                 resolve(result)

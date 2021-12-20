@@ -7,6 +7,7 @@
     z-index: 2;
     #brand{
         font-size: 1.5rem;
+        color: $text-primary-color;
     }
     .container{
         display: flex;
@@ -41,6 +42,25 @@
             padding: 0 .5rem;
             img{
                 width: 24px;
+            }
+        }
+        .toolTipHolder{
+            position: relative;
+            span{
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $text-primary-color;
+                color: #fff;
+                border-radius: $border-radius;
+                visibility: hidden;
+                opacity: 0;
+                transition: .2s ease-in-out;
+            }
+            &:hover span{
+                visibility: visible;
+                opacity: 1;
             }
         }
     }
@@ -108,16 +128,21 @@
             display: block;
             margin-bottom: 1rem;
         }
+        p{
+            margin-bottom: 1rem;
+        }
         .link{
             display: block;
-            width: 150px;
+            width: 210px;
             text-decoration: none;
-            color: $primary-color;
+            white-space: nowrap;
+            color: $text-primary-color;
             overflow: hidden;
             text-overflow: ellipsis;
             &:hover{
                 cursor: pointer;
                 text-decoration: underline;
+                color: $primary-color;
             }
         }
     }
@@ -133,11 +158,11 @@
             font-size: 1.3rem;
             cursor: pointer;
             &:hover{
-                color: #ED4956;
+                color: $hot-color;
             }
         }
         p{
-            color: #ED4956;
+            color: $hot-color;
         }
     }
 }
