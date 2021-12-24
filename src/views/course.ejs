@@ -1,0 +1,23 @@
+<%- include('partials/header.ejs') %>
+
+<%- include('partials/headerNavigation.ejs') %>
+<main id="course-feeds">
+    <div class="container">
+        <h2 class="subject-name">Course: <%= subjectName %></h2>
+        <section id="courses-grid">
+            <% subjectCourses.forEach(sc => { %>
+                <div class="post-card">
+                    <div class="card-body">
+                        <h3><%- sc.course_name %></h3>
+                        <span class="date"><%- sc.course_created_at %></span>
+                        <p><%- sc.course_description %></p>
+                        <a class="link" href="<%- sc.course_link %>"><%- sc.course_link %></a>
+                    </div>
+                </div>
+            <%})  %>
+        </section>
+        <!-- end of container -->
+    </div>
+</main>
+
+<%- include('partials/footer.ejs') %>

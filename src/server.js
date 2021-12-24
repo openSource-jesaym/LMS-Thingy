@@ -16,6 +16,9 @@ app.get('/', (req, res)=>{
 const homeRoute = require('./routes/Home')
 app.use('/home', homeRoute)
 
+const coursesRoute = require('./routes/Courses')
+app.use('/course', coursesRoute)
+
 app.get('*', (req, res)=>{
     res.json({'message': '🙈 404!'})
 })
