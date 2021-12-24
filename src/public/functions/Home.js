@@ -1,4 +1,4 @@
-const { conn } = require('../Config/DB/Connection')
+const { conn } = require('../../Config/DB/Connection')
 
 // Function that returns an array of courses data 
 const getCoursesData = _ => {

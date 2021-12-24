@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { getCoursesData, getSubjects} = require('../Functions/Home')
+const { getCoursesData, getSubjects} = require('../public/functions/Home')
 
 
 // Home view / Feeds page

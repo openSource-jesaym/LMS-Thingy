@@ -328,7 +328,8 @@ footer #author-link {
   color: #ED4956;
 }
 
-.post-card .card-footer p {
+.post-card .card-footer a {
+  text-decoration: none;
   color: #ED4956;
 }
 
@@ -375,5 +376,12 @@ footer #author-link {
   font-size: 3rem;
   font-weight: bold;
   margin-right: 1rem;
+}
+
+#course-feeds .container .subject-name {
+  margin: 1rem 0;
+  width: 100%;
+  padding: .5rem 1rem;
+  background-color: #DBDBDB;
 }
 /*# sourceMappingURL=index.css.map */
