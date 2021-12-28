@@ -1,49 +1,87 @@
 <%- include('partials/header.ejs') %>
 <div class="container">
-    <main id="main-index-view">
-        <div id="intro">
-            <a href="/home" style="color: purple;">Home</a>
-            <a href="/home/subjects" style="color: purple;">Subjects</a>
-            <h1 id="brand">MDSB.TN</h1>
-            <p>Online platform for student of ISLAIB (Master Data Science specifically).</p>
-            <p>Both teachers and students can post courseware, assignments, announcements and exams...</p>
-            <p>If you're looking for some memes, make sure to check out <a href="https://vaga.tn" target="_blank" id="vagaLink">vaga.tn ↗</a></p>
+  <main id="main-index-view">
+    <div id="intro">
+      <a href="/home" style="color: purple">Home</a>
+      <a href="/home/subjects" style="color: purple">Subjects</a>
+      <h1 id="brand">MDSB.TN</h1>
+      <p>
+        Online platform for student of ISLAIB (Master Data Science
+        specifically).
+      </p>
+      <p>
+        Both teachers and students can post courseware, assignments,
+        announcements and exams...
+      </p>
+      <p>
+        If you're looking for some memes, make sure to check out
+        <a href="https://vaga.tn" target="_blank" id="vagaLink">vaga.tn ↗</a>
+      </p>
+    </div>
+    <div id="forms">
+      <form id="login-form">
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Email or username"
+        />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+        />
+        <input type="submit" id="login-button" value="Log in" />
+      </form>
+      <form id="signup-form">
+        <input type="text" id="name" name="name" placeholder="Name" />
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          placeholder="Last name"
+        />
+        <input type="email" id="email" name="email" placeholder="Email" />
+        <input
+          type="text"
+          id="signup-username"
+          name="signup-username"
+          placeholder="Username"
+        />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+        />
+        <div id="user-role">
+          <label>
+            <input type="radio" name="userRole" id="teacher" />
+            <span>Teacher</span>
+          </label>
+          <label>
+            <input type="radio" name="userRole" id="student" />
+            <span>Student</span>
+          </label>
         </div>
-        <div id="forms">
-            <form id="login-form">
-                <input type="text" id="username" name="username" placeholder="Email or username">
-                <input type="password" id="password" name="password" placeholder="Password">
-                <input type="submit" id="login-button" value="Log in">
-            </form>
-            <form id="signup-form">
-                <input type="text" id="name" name="name" placeholder="Name">
-                <input type="text" id="lastName" name="lastName" placeholder="Last name">
-                <input type="email" id="email" name="email" placeholder="Email">
-                <input type="text" id="signup-username" name="signup-username" placeholder="Username">
-                <input type="password" id="password" name="password" placeholder="Password">
-                <div id="user-role">
-                    <label>
-                        <input type="radio" name="userRole" id="teacher">
-                        <span>Teacher</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="userRole" id="student">
-                        <span>Student</span>
-                    </label>
-                </div>
-                <label>
-                    <span></span>
-                </label>
-                <input type="submit" id="signup-button" value="Signup">
-            </form>
-            <button id="login-trigger">Login</button>
-            <button id="signup-trigger">Request an account</button>
-        </div>
-    </main>
-    <footer>
-        <p>mdsbeja@gmail.com, mds.islaib@gmail.com</p>
-        <p>Made with 0.0001% 💜, <a href="https://aymkh.tn" id="author-link" target="_blank">AymKh ↗</a> &copy; 2021</p>
-    </footer>
-    <!-- end of container -->
+        <label>
+          <span></span>
+        </label>
+        <input type="submit" id="signup-button" value="Signup" />
+      </form>
+      <button id="login-trigger">Login</button>
+      <button id="signup-trigger">Request an account</button>
+    </div>
+  </main>
+  <footer>
+    <p>mdsbeja@gmail.com, mds.islaib@gmail.com</p>
+    <p>
+      Made with 0.0001% 💜,
+      <a href="https://aymkh.tn" id="author-link" target="_blank">AymKh ↗</a>
+      &copy; 2021
+    </p>
+  </footer>
+  <!-- end of container -->
 </div>
 <%- include('partials/footer.ejs') %>
