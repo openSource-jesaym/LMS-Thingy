@@ -11,8 +11,7 @@ Route | Description
 
 ## Usage
 ### Dotenv
-add a `env` folder in `src/` containing your `.env` file for local or production configuration 
-
+add a `.env` file `src/config/env` containing the DB configuration for development or production
 ### Running the server in development mode (using ts-node)
 you have the option to run the server using:  
 - node: `npm run start`

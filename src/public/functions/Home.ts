@@ -1,6 +1,6 @@
-import { Pool, PoolConnection } from "mysql";
+import { PoolConnection } from "mysql";
 import util from "util";
-import { pool } from "../../Config/DB/Connection";
+import { handleDBError } from "../../config/DB/Connection";
 import { Course } from "../../models/course.model";
 import { Subject } from "../../models/subject.model";
 
@@ -20,7 +20,7 @@ const getCoursesData = async (connection: PoolConnection) => {
     const rows = <Course[]>await asyncQuery(query);
     return rows;
   } catch (error: any) {
-    console.log(error);
+    console.error(error);
   } finally {
     connection.release();
   }
@@ -40,7 +40,7 @@ const getSubjects = async (connection: PoolConnection) => {
     const rows = <Subject[]>await asyncQuery(query);
     return rows;
   } catch (error: any) {
-    console.log(error);
+    console.error(error);
   } finally {
     connection.release();
   }

@@ -1,10 +1,11 @@
+import { MysqlError } from "mysql";
 import util from "util";
-import { pool } from "../../Config/DB/Connection";
+import { pool, handleDBError } from "../../config/DB/Connection";
 
 // Function that returns an array of courses data
 const getCoursesForOneSubject = async (subjectName: string) => {
   pool.getConnection(async (err, connection) => {
-    if (err) throw err;
+    if (err) handleDBError(err);
     const asyncQuery = util.promisify(connection.query).bind(connection);
 
     try {
@@ -23,8 +24,8 @@ const getCoursesForOneSubject = async (subjectName: string) => {
         )
         ORDER BY courses.course_id DESC;`;
       return await asyncQuery(query);
-    } catch (error) {
-      console.log(error);
+    } catch (error: any) {
+      console.error(error)
     }
   });
 };

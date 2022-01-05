@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 const app = express();
-dotenv.config({path: __dirname + "/env/.env"});
+dotenv.config({path: __dirname + "/config/env/.env"});
 const PORT = 2015 || process.env.PORT;
 import path from "path";
 app.set("views", path.join(__dirname + "/views"));
