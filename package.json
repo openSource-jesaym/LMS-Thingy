@@ -7,7 +7,7 @@
     "start": "node src/server.ts",
     "dev": "nodemon src/server.ts",
     "build": "gulp",
-    "prod": "node dist/server.js"
+    "prod": "forever start dist/server.js"
   },
   "keywords": [],
   "author": "",

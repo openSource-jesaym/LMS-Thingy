@@ -15,10 +15,6 @@ gulp.task("build-clean", function () {
   return del(["./dist"]);
 });
 
-// Task which would just create a copy of the current views directory in dist directory
-gulp.task("env", function () {
-  return gulp.src("./src/config/env/.env").pipe(gulp.dest("./dist/config/env"));
-});
 
 // Task which would compile the sass files to css
 gulp.task("buildStyles", () => {
@@ -49,7 +45,6 @@ gulp.task(
     "build-clean",
     "typescript",
     "buildStyles",
-    "env",
     "views",
     "assets"
   ),
