@@ -1,49 +1,49 @@
-a{
-    text-decoration: none;
-    color: #fff;
-    border-radius: $border-radius;
+a {
+  text-decoration: none;
+  color: #fff;
+  border-radius: $border-radius;
 }
-#main-index-view{
-    width: 100%;
-    margin-top: 5rem;
-    #intro{
-        p{
-            font-size: 1.4rem;
-            &:nth-child(4){
-                margin: 1rem 0;
-            }
-        }
-        #vagaLink{
-            padding: .2rem .4rem;
-            background-color: $primary-color;
-        }
+#main-index-view {
+  width: 100%;
+  margin-top: 5rem;
+  #intro {
+    p {
+      font-size: 1.4rem;
+      &:nth-child(4) {
+        margin: 1rem 0;
+      }
     }
-    #forms{
-        button{
-            padding: .5rem 1rem;
-            font-size: 1rem;
-            color: #fff;
-            cursor: pointer;
-            border: none;
-            border-radius: $border-radius;
-        }
-        #login-trigger{
-            background-color: $primary-color;
-        }
-        #signup-trigger{
-            background-color: $secondary-color;
-        }
-        form{
-            display: none;
-        }
+    #vagaLink {
+      padding: 0.2rem 0.4rem;
+      background-color: $primary-color;
     }
+  }
+  #forms {
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      border-radius: $border-radius;
+    }
+    #login-trigger {
+      background-color: $primary-color;
+    }
+    #signup-trigger {
+      background-color: $secondary-color;
+    }
+    form {
+      display: none;
+    }
+  }
 }
-footer{
-    position: fixed;
-    bottom: 1rem;
-    color: $text-primary-color;
-    #author-link{
-        padding: .2rem .2rem;
-        background-color: $primary-color;
-    }
+footer {
+  position: fixed;
+  bottom: 1rem;
+  color: $text-primary-color;
+  #author-link {
+    padding: 0.2rem 0.2rem;
+    background-color: $primary-color;
+  }
 }
