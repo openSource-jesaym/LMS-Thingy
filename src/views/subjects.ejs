@@ -6,9 +6,9 @@
         <section id="subjects-grid">
             <% subjects.forEach(s => { %>
                 <div class="subject-card">
-                    <a class="subject-title" href="/course/<%- s.Subject %>"><%- s.Subject %></a>
-                    <p class="teacher">Taught by <strong><%- s.Teacher %></strong></p>
-                    <p class="course-count-subject"><span><%- s.CoursesCount %></span> Course(s)</p>
+                    <a class="subject-title" href="/course/<%- s.subject %>"><%- s.subject %></a>
+                    <p class="teacher">Taught by <strong><%- s.teacher %></strong></p>
+                    <p class="course-count-subject"><span><%- s.coursesCount %></span> Course(s)</p>
                 </div>
             <%})  %>
         </section>
