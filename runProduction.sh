@@ -3,7 +3,7 @@
 # This is a post deployment hook
 
 # All the cloned content will be placed under /home/jelastic/ROOT
-cd ROOT
+cd /home/jelastic/ROOT
 # Installing all the necessary packages
 npm i
 # making a fresh build
