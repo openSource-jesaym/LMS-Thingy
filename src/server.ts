@@ -1,15 +1,16 @@
 import express from "express";
 import dotenv from "dotenv";
-const app = express();
-dotenv.config({path: __dirname + "/config/env/.env"});
-const PORT = 2015 || process.env.PORT;
 import path from "path";
+const app = express();
+const PORT = 2015 || process.env.PORT;
+
+dotenv.config({path: path.join(__dirname, '/config/env/.env')});
 app.set("views", path.join(__dirname + "/views"));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname + '/public')));
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("views/index");
 });
 
 // ROUTES
