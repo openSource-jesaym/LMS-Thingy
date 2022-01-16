@@ -20,6 +20,10 @@ app.use("/home", homeRoute);
 import coursesRoute from "./routes/Courses";
 app.use("/course", coursesRoute);
 
+app.get("/admin", (req, res) => {
+  res.redirect("http://197.13.27.192/");
+});
+
 app.listen(PORT, () => {
   console.log(`✨ Live on port ${PORT}`);
 });
