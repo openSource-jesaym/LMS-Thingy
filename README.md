@@ -22,7 +22,7 @@ npm run start
 npm run dev
 ```
 **Compiling and Running the server in production mode**  
-We're use [`gulp ➚`](https://gulpjs.com/) for automation.  
+We're using [`gulp ➚`](https://gulpjs.com/) for automation.  
 You need to compile TypeScript into valid JavaScript code, in order to be able to run it.  
 
 Here is a list with the available options
