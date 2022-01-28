@@ -9,21 +9,33 @@ app.set("views", path.join(__dirname + "/views"));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname + '/public')));
 
-app.get("/", (req, res) => {
-  res.redirect("/home");
-});
 
 // ROUTES
 import homeRoute from "./routes/Home";
-app.use("/home", homeRoute);
+app.use("/", homeRoute);
 
 import coursesRoute from "./routes/Courses";
 app.use("/course", coursesRoute);
+
+app.get('/about', (req, res)=> {
+  res.render('about')
+})
+
+app.get('/contact', (req, res)=> {
+  res.render('contact')
+})
+
+app.get('/contributors', (req, res)=> {
+  res.render('contributors')
+})
 
 app.get("/admin", (req, res) => {
   res.redirect("http://197.13.27.192/");
 });
 
+app.get('*', (req, res)=> {
+  res.render('404')
+})
 app.listen(PORT, () => {
   console.log(`✨ Live on port ${PORT}`);
 });

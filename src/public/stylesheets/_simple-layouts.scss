@@ -1,0 +1,28 @@
+#description-section-layout {
+    line-height: 2;
+    margin-top: 1rem;
+    section{
+        h2{
+            font-size: 2rem;
+        }
+        padding: 1rem 2rem;
+        background-color: $plain-white;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        a {
+            font-size: 0.8rem;
+            color: $hot-color-1;
+            &:hover {
+                background-color: $pc-3;
+            }
+            &:active {
+                color: $pc-3;
+                background-color: $hot-color-1;
+            }
+        }
+        // contributors
+        h3{
+            margin-top: 3rem;
+        }
+    }
+}
