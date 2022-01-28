@@ -33,6 +33,10 @@ app.get("/admin", (req, res) => {
   res.redirect("http://197.13.27.192/");
 });
 
+app.get("/docs", (req, res) => {
+  res.redirect("https://mds-islaib.gitbook.io/");
+});
+
 app.get('*', (req, res)=> {
   res.render('404')
 })
