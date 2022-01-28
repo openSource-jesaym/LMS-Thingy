@@ -1,0 +1,16 @@
+#description-section-layout {
+    position: relative;
+    h1{
+        font-size: 4rem;
+    }
+    img{
+        width: 300px;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    section{
+        padding-bottom: 10rem;
+    }
+}

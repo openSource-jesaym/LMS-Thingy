@@ -1,87 +1,86 @@
 <%- include('partials/header.ejs') %>
-<div class="container">
-  <main id="main-index-view">
-    <div id="intro">
-      <a href="/home" style="color: purple">Home</a>
-      <a href="/home/subjects" style="color: purple">Subjects</a>
-      <h1 id="brand">MDSB.TN</h1>
-      <p>
-        Online platform for student of ISLAIB (Master Data Science
-        specifically).
-      </p>
-      <p>
-        Both teachers and students can post courseware, assignments,
-        announcements and exams...
-      </p>
-      <p>
-        If you're looking for some memes, make sure to check out
-        <a href="https://vaga.tn" target="_blank" id="vagaLink">vaga.tn ↗</a>
-      </p>
+
+<%- include('partials/headerPublic.ejs') %>
+<main id="main-feeds">
+    <div class="container">
+        <section id="sidePanel">
+            <ul id="main-side-links">
+                <li>
+                    <a href="/">
+                        🏠 <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        ⏰ <span>Time Table</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://drive.google.com/drive/folders/1wcR_ovIGtnMui2ZgUipthLCRQRXuZLmJ?usp=sharing" target="_blank">
+                        💾 <span>Google Drive</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/archive">
+                        📰 <span>Archive</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/subjects">
+                        📚 <span>Subjects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/about">
+                        🤔 <span>About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact">
+                        🙊 <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- SOCIAL MEDIA LINKS -->
+            <div id="social-links">
+                <a href="https://github.com/MDS-ISALIB/mds-cms-2.0" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UC_w7dvQStESeyVCy7sG9P5A" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.facebook.com/groups/549130559628570" target="_blank">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+            </div>
+
+            <footer>
+                <p>Made with 0.0001% 💜, by </p>
+                <p>
+                    <a href="https://aymkh.tn" id="author-link" target="_blank">AymKh ↗</a> and other <a href="/contributors" id="Contributers-link">contributors ↗</a> &copy; 2021-2022.
+                </p>
+            </footer>
+        </section>
+        <section id="posts">
+            <% courses.forEach(c => { %>
+                <div class="post-card">
+                    <div class="card-body">
+                        <h3><%- c.course %></h3>
+                        <span class="date"><%- c.postedON %></span>
+                        <p><%- c.description %></p>
+                        <a class="link" href="<%- c.link %>"><%- c.link %></a>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/course/<%- c.subject %>"><%- c.subject %></a>
+                        <span class="save">
+                            <i class="far fa-bookmark"></i>
+                        </span>
+                    </div>
+                </div>
+            <%})  %>
+        </section>
+        <!-- end of container -->
     </div>
-    <div id="forms">
-      <form id="login-form">
-        <input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="Email or username"
-        />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Password"
-        />
-        <input type="submit" id="login-button" value="Log in" />
-      </form>
-      <form id="signup-form">
-        <input type="text" id="name" name="name" placeholder="Name" />
-        <input
-          type="text"
-          id="lastName"
-          name="lastName"
-          placeholder="Last name"
-        />
-        <input type="email" id="email" name="email" placeholder="Email" />
-        <input
-          type="text"
-          id="signup-username"
-          name="signup-username"
-          placeholder="Username"
-        />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Password"
-        />
-        <div id="user-role">
-          <label>
-            <input type="radio" name="userRole" id="teacher" />
-            <span>Teacher</span>
-          </label>
-          <label>
-            <input type="radio" name="userRole" id="student" />
-            <span>Student</span>
-          </label>
-        </div>
-        <label>
-          <span></span>
-        </label>
-        <input type="submit" id="signup-button" value="Signup" />
-      </form>
-      <button id="login-trigger">Login</button>
-      <button id="signup-trigger">Request an account</button>
-    </div>
-  </main>
-  <footer>
-    <p>mdsbeja@gmail.com, mds.islaib@gmail.com</p>
-    <p>
-      Made with 0.0001% 💜,
-      <a href="https://aymkh.tn" id="author-link" target="_blank">AymKh ↗</a>
-      &copy; 2021
-    </p>
-  </footer>
-  <!-- end of container -->
-</div>
+</main>
+
 <%- include('partials/footer.ejs') %>

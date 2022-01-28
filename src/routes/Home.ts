@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
   pool.getConnection(async (err, connection) => {
     if (err) handleDBError(err);
     const courses = await getCoursesData(connection);
-    res.render("home", { courses });
+    res.render("index", { courses });
   });
 });
 

@@ -15,11 +15,17 @@
     padding: 1rem;
     .subject-title{
         font-size: 1.5rem;
-        color: $hot-color;
-        text-decoration: underline;
+        color: $hot-color-1;
+        &:hover {
+            background-color: $pc-3;
+        }
+        &:active {
+            color: $pc-3;
+            background-color: $hot-color-1;
+        }
     }
     .teacher{
-        color: #a2a2a2;
+        color: $hot-color-2;
     }
     .course-count-subject{
         display: flex;
