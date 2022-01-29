@@ -43,6 +43,13 @@ gulp.task("assets", function () {
     .pipe(gulp.dest("./dist/public/assets"));
 });
 
+// Minify images (png)
+gulp.task('image', () => {
+  return gulp
+  .src('./src/public/images/*')
+  .pipe(gulp.dest('./dist/public/images/'))
+});
+
 // The default task which runs at start of the gulpfile.js
 gulp.task(
   "default",
@@ -52,7 +59,8 @@ gulp.task(
     "buildStyles",
     "env",
     "views",
-    "assets"
+    "assets",
+    "image"
   ),
   () => {
     console.log("Done");
