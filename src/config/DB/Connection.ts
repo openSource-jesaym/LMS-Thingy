@@ -10,21 +10,22 @@ const pool = mysql.createPool({
 
 // Ping database to check for common exception errors.
 pool.getConnection((err, connection) => {
-
   if (err) return handleDBError(err);
-  connection.query("select 1 from subjects", (err, rows) => {
-    if (err) handleDBError(err)
-    if (connection) connection.release()
+  connection.query("select 1 from subjects", (queryErr, _) => {
+    if (queryErr) handleDBError(queryErr);
+    if (connection) connection.release();
   });
-})
+});
 
 const handleDBError = (err: MysqlError) => {
   if (err) {
     if (Object.keys(ErrCodeToMessageMap).includes(err.code)) {
-      console.error("Mysql error: "+ErrCodeToMessageMap[<CommonDBErrorCodes>err.code]);
+      console.error(
+        "\n Mysql error: " + ErrCodeToMessageMap[<CommonDBErrorCodes>err.code], err.message
+      );
     } else {
-      console.error("An Unknown DB error has occured: ",err);
-    } 
+      console.error("An Unknown DB error has occured: ", err);
+    }
   }
-}
+};
 export { pool, handleDBError };
